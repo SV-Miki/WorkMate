@@ -24,14 +24,13 @@ Workmate_rating/
 │    │   │   └── base.py
 │    │   ├── __init__.py
 │    │   ├── loader.py
-     ├── __init__.py
+│    ├── __init__.py
 │    └── main.py
 ├── .gitignore
 ├── README.md
 └── requirements.txt
 ```
 
-⸻
 
 Примеры CSV-файлов
 
@@ -57,7 +56,6 @@ redmi 10c	xiaomi	149	4.1
 iphone 13 mini	apple	599	4.5
 ```
 
-⸻
 
 ## Запуск скрипта и результаты
 
@@ -75,7 +73,6 @@ python -m workmate_rating.main --files workmate_rating/examples/products1.csv wo
 |  3 | xiaomi  |     4.37 |
 
 
-⸻
 
 ### Обработка одного файла - products1
 
@@ -92,23 +89,21 @@ python -m workmate_rating.main --files workmate_rating/examples/products1.csv --
 |  2 | samsung | 4.6    |
 |  3 | xiaomi  | 4.5    |
 
-⸻
 
 ### Ошибка: отсутствующий файл
 
 ```commandline
-python -m  workmate_rating.main --files workmate_rating/examples/non_existent.csv  --report average-rating
+python -m workmate_rating.main --files workmate_rating/examples/non_existent.csv  --report average-rating
 ```
 
 Результат:
 
 `Ошибка: Файл не найден по пути 'workmate_rating/examples/non_existent.csv'`
 
-⸻
 ### Ошибка: неизвестный отчет
 
 ```commandline
-python -m  workmate_rating.main --files workmate_rating/examples/products2.csv  --report average-potke 
+python -m workmate_rating.main --files workmate_rating/examples/products2.csv  --report average-potke 
 ```
 
 Результат:
@@ -117,12 +112,12 @@ python -m  workmate_rating.main --files workmate_rating/examples/products2.csv  
  Доступные отчеты: average-rating
 `
 
-⸻
 ## Тестирование
 `python -m pytest -v`
+
 `python -m pytest --cov=workmate_rating`
 
-⸻
+
 ## Расширение функционала
 
 Чтобы создать новый отчет, например, `average-price`:
